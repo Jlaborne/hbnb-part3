@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Application{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Link to favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/icon.png') }}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header section containing logo and navigation -->
+        <header>
+            <!-- Div for the logo and left-aligned navigation links -->
+            <div class="header-left">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+                <nav class="left-nav">
+                    <a href="{{ url_for('index_page') }}">Home</a>
+                    <a href="{{ url_for('get_places') }}">Places</a>
+                </nav>
+            </div>
+            <!-- Login button aligned to the right side of the header -->
+            <a href="{{ url_for('login_page') }}" class="login-button">Login</a>
+        </header>
+
+        <!-- Main content section -->
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <!-- Footer section -->
+        <footer>
+            <p>All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

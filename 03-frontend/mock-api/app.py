@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 import json
 from uuid import uuid4
@@ -16,6 +16,14 @@ with open('data/places.json') as f:
 
 # In-memory storage for new reviews
 new_reviews = []
+
+@app.route('/')
+def index_page():
+    return render_template('index.html')
+
+@app.route('/login', methods=['GET'])
+def login_page():
+    return render_template('login.html')
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -43,13 +51,14 @@ def get_places():
             "city_id": place['city_id'],
             "city_name": place['city_name'],
             "country_code": place['country_code'],
-            "country_name": place['country_name']
+            "country_name": place['country_name'],
+            "image_url": place['image_url']
         }
         for place in places
     ]
     return jsonify(response)
 
-@app.route('/places/<place_id>', methods=['GET'])
+@app.route('/places/<place_id>/json', methods=['GET'])
 def get_place(place_id):
     place = next((p for p in places if p['id'] == place_id), None)
 
@@ -72,7 +81,8 @@ def get_place(place_id):
         "country_code": place['country_code'],
         "country_name": place['country_name'],
         "amenities": place['amenities'],
-        "reviews": place['reviews'] + [r for r in new_reviews if r['place_id'] == place_id]
+        "reviews": place['reviews'] + [r for r in new_reviews if r['place_id'] == place_id],
+        "image_url": place['image_url']
     }
     return jsonify(response)
 
@@ -95,6 +105,18 @@ def add_review(place_id):
 
     new_reviews.append(new_review)
     return jsonify({"msg": "Review added"}), 201
+
+@app.route('/places/<place_id>', methods=['GET'])
+def place_details(place_id):
+    place = next((p for p in places if p['id'] == place_id), None)
+
+    if not place:
+        return jsonify({"msg": "Place not found"}), 404
+
+    # Fetch reviews associated with the place
+    place_reviews = [r for r in new_reviews if r['place_id'] == place_id]
+
+    return render_template('place.html', place=place, reviews=place_reviews)
 
 if __name__ == '__main__':
     app.run(debug=True)

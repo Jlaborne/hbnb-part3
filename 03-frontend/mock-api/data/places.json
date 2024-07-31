@@ -26,7 +26,8 @@
                 "rating": 4,
                 "comment": "Great location but a bit noisy."
             }
-        ]
+        ],
+        "image_url": "/static/images/place-1.jpg"
     },
     {
         "id": "place-2",
@@ -44,7 +45,8 @@
         "latitude": 42.3601,
         "longitude": -71.0589,
         "amenities": ["WiFi", "Fireplace"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-2.jpg"
     },
     {
         "id": "place-3",
@@ -62,7 +64,8 @@
         "latitude": 34.0522,
         "longitude": -118.2437,
         "amenities": ["WiFi", "Pool", "Beach Access"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-3.jpg"
     },
     {
         "id": "place-4",
@@ -80,7 +83,8 @@
         "latitude": 43.6532,
         "longitude": -79.3832,
         "amenities": ["WiFi", "Gym"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-4.jpg"
     },
     {
         "id": "place-5",
@@ -104,7 +108,8 @@
                 "rating": 5,
                 "comment": "Perfect for a getaway!"
             }
-        ]
+        ],
+        "image_url": "/static/images/place-5.jpg"
     },
     {
         "id": "place-6",
@@ -113,9 +118,9 @@
         "description": "A modern loft in the heart of the city.",
         "price_per_night": 110.0,
         "city_id": "city-1",
-        "city_name": "New York",
-        "country_code": "US",
-        "country_name": "United States",
+        "city_name": "Paris",
+        "country_code": "FR",
+        "country_name": "France",
         "number_of_rooms": 1,
         "number_of_bathrooms": 1,
         "max_guests": 2,
@@ -128,7 +133,8 @@
                 "rating": 4,
                 "comment": "Very convenient location."
             }
-        ]
+        ],
+        "image_url": "/static/images/place-6.jpg"
     },
     {
         "id": "place-7",
@@ -146,7 +152,8 @@
         "latitude": 42.3601,
         "longitude": -71.0589,
         "amenities": ["WiFi", "Breakfast"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-7.jpg"
     },
     {
         "id": "place-8",
@@ -164,7 +171,8 @@
         "latitude": 34.0522,
         "longitude": -118.2437,
         "amenities": ["WiFi", "Pool", "Gym"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-8.jpg"
     },
     {
         "id": "place-9",
@@ -188,7 +196,8 @@
                 "rating": 4,
                 "comment": "Beautiful view but the beds were a bit uncomfortable."
             }
-        ]
+        ],
+        "image_url": "/static/images/place-9.jpg"
     },
     {
         "id": "place-10",
@@ -206,7 +215,8 @@
         "latitude": 49.2827,
         "longitude": -123.1207,
         "amenities": ["WiFi", "Fireplace", "Pool"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-10.jpg"
     },
     {
         "id": "place-11",
@@ -230,7 +240,8 @@
                 "rating": 5,
                 "comment": "Amazing location and great amenities."
             }
-        ]
+        ],
+        "image_url": "/static/images/place-11.jpg"
     },
     {
         "id": "place-12",
@@ -248,7 +259,8 @@
         "latitude": 42.3601,
         "longitude": -71.0589,
         "amenities": ["WiFi"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-12.jpg"
     },
     {
         "id": "place-13",
@@ -277,7 +289,8 @@
                 "rating": 4,
                 "comment": "Incredible views but a bit pricey."
             }
-        ]
+        ],
+        "image_url": "/static/images/place-13.jpg"
     },
     {
         "id": "place-14",
@@ -295,7 +308,8 @@
         "latitude": 43.6532,
         "longitude": -79.3832,
         "amenities": ["WiFi", "Fireplace"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-14.jpg"
     },
     {
         "id": "place-15",
@@ -319,7 +333,8 @@
                 "rating": 4,
                 "comment": "Very cozy and clean."
             }
-        ]
+        ],
+        "image_url": "/static/images/place-15.jpg"
     },
     {
         "id": "place-16",
@@ -327,17 +342,18 @@
         "host_name": "John Doe",
         "description": "A beautiful mansion.",
         "price_per_night": 500.0,
-        "city_id": "city-1",
-        "city_name": "New York",
-        "country_code": "US",
-        "country_name": "United States",
+        "city_id": "city-7",
+        "city_name": "Marseille",
+        "country_code": "FR",
+        "country_name": "France",
         "number_of_rooms": 6,
         "number_of_bathrooms": 5,
         "max_guests": 12,
         "latitude": 40.7128,
         "longitude": -74.0060,
         "amenities": ["WiFi", "Pool", "Gym", "Sauna"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-16.jpg"
     },
     {
         "id": "place-17",
@@ -345,17 +361,18 @@
         "host_name": "Jane Smith",
         "description": "A small guest house.",
         "price_per_night": 50.0,
-        "city_id": "city-2",
-        "city_name": "Boston",
-        "country_code": "US",
-        "country_name": "United States",
+        "city_id": "city-8",
+        "city_name": "Laval",
+        "country_code": "FR",
+        "country_name": "France",
         "number_of_rooms": 1,
         "number_of_bathrooms": 1,
         "max_guests": 2,
         "latitude": 42.3601,
         "longitude": -71.0589,
         "amenities": ["WiFi"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-17.jpg"
     },
     {
         "id": "place-18",
@@ -363,10 +380,10 @@
         "host_name": "Alice Johnson",
         "description": "A contemporary home.",
         "price_per_night": 200.0,
-        "city_id": "city-3",
-        "city_name": "Los Angeles",
-        "country_code": "US",
-        "country_name": "United States",
+        "city_id": "city-9",
+        "city_name": "Madrid",
+        "country_code": "ES",
+        "country_name": "Spain",
         "number_of_rooms": 4,
         "number_of_bathrooms": 3,
         "max_guests": 8,
@@ -379,7 +396,8 @@
                 "rating": 5,
                 "comment": "Absolutely fantastic place!"
             }
-        ]
+        ],
+        "image_url": "/static/images/place-18.jpg"
     },
     {
         "id": "place-19",
@@ -387,17 +405,18 @@
         "host_name": "John Doe",
         "description": "A vintage house.",
         "price_per_night": 85.0,
-        "city_id": "city-4",
-        "city_name": "Toronto",
-        "country_code": "CA",
-        "country_name": "Canada",
+        "city_id": "city-10",
+        "city_name": "London",
+        "country_code": "EN",
+        "country_name": "United Kingdom",
         "number_of_rooms": 2,
         "number_of_bathrooms": 1,
         "max_guests": 4,
         "latitude": 43.6532,
         "longitude": -79.3832,
         "amenities": ["WiFi", "Fireplace"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-19.jpg"
     },
     {
         "id": "place-20",
@@ -405,17 +424,18 @@
         "host_name": "Jane Smith",
         "description": "A rustic cabin.",
         "price_per_night": 75.0,
-        "city_id": "city-5",
-        "city_name": "Vancouver",
-        "country_code": "CA",
-        "country_name": "Canada",
+        "city_id": "city-9",
+        "city_name": "Madrid",
+        "country_code": "ES",
+        "country_name": "Spain",
         "number_of_rooms": 3,
         "number_of_bathrooms": 2,
         "max_guests": 6,
         "latitude": 49.2827,
         "longitude": -123.1207,
         "amenities": ["WiFi", "Fireplace"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-20.jpg"
     },
     {
         "id": "place-21",
@@ -423,10 +443,10 @@
         "host_name": "Alice Johnson",
         "description": "A luxurious condo.",
         "price_per_night": 220.0,
-        "city_id": "city-1",
-        "city_name": "New York",
-        "country_code": "US",
-        "country_name": "United States",
+        "city_id": "city-7",
+        "city_name": "Marseille",
+        "country_code": "FR",
+        "country_name": "France",
         "number_of_rooms": 3,
         "number_of_bathrooms": 2,
         "max_guests": 6,
@@ -444,7 +464,8 @@
                 "rating": 4,
                 "comment": "Very nice but a bit expensive."
             }
-        ]
+        ],
+        "image_url": "/static/images/place-21.jpg"
     },
     {
         "id": "place-22",
@@ -462,7 +483,8 @@
         "latitude": 42.3601,
         "longitude": -71.0589,
         "amenities": ["WiFi", "Pool"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-22.jpg"
     },
     {
         "id": "place-23",
@@ -470,17 +492,18 @@
         "host_name": "Jane Smith",
         "description": "A large family home.",
         "price_per_night": 140.0,
-        "city_id": "city-3",
-        "city_name": "Los Angeles",
-        "country_code": "US",
-        "country_name": "United States",
+        "city_id": "city-6",
+        "city_name": "Paris",
+        "country_code": "FR",
+        "country_name": "France",
         "number_of_rooms": 4,
         "number_of_bathrooms": 3,
         "max_guests": 8,
         "latitude": 34.0522,
         "longitude": -118.2437,
         "amenities": ["WiFi", "Pool"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-23.jpg"
     },
     {
         "id": "place-24",
@@ -488,17 +511,18 @@
         "host_name": "Alice Johnson",
         "description": "A small studio apartment.",
         "price_per_night": 65.0,
-        "city_id": "city-4",
-        "city_name": "Toronto",
-        "country_code": "CA",
-        "country_name": "Canada",
+        "city_id": "city-10",
+        "city_name": "London",
+        "country_code": "GB",
+        "country_name": "United Kingdom",
         "number_of_rooms": 1,
         "number_of_bathrooms": 1,
         "max_guests": 2,
         "latitude": 43.6532,
         "longitude": -79.3832,
         "amenities": ["WiFi"],
-        "reviews": []
+        "reviews": [],
+        "image_url": "/static/images/place-24.jpg"
     },
     {
         "id": "place-25",
@@ -506,10 +530,10 @@
         "host_name": "John Doe",
         "description": "A grand estate.",
         "price_per_night": 350.0,
-        "city_id": "city-5",
-        "city_name": "Vancouver",
-        "country_code": "CA",
-        "country_name": "Canada",
+        "city_id": "city-9",
+        "city_name": "Madrid",
+        "country_code": "ES",
+        "country_name": "Spain",
         "number_of_rooms": 5,
         "number_of_bathrooms": 4,
         "max_guests": 10,
@@ -522,6 +546,7 @@
                 "rating": 5,
                 "comment": "Absolutely stunning!"
             }
-        ]
+        ],
+        "image_url": "/static/images/place-25.jpg"
     }
 ]

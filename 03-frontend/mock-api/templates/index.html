@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <section id="filter">
+        <label for="country-filter">Filter by Country:</label>
+        <select id="country-filter">
+            <!-- Options will be populated dynamically -->
+        </select>
+    </section>
+    <section id="places-list">
+        <!-- List of places will be populated dynamically -->
+    </section>
+    <!-- Include the index-specific script -->
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}

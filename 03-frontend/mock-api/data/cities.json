@@ -26,28 +26,28 @@
     },
     {
         "id": "city-6",
-        "name": "Chicago",
-        "country_code": "US"
+        "name": "Paris",
+        "country_code": "FR"
     },
     {
         "id": "city-7",
-        "name": "San Francisco",
-        "country_code": "US"
+        "name": "Marseille",
+        "country_code": "FR"
     },
     {
         "id": "city-8",
-        "name": "Miami",
-        "country_code": "US"
+        "name": "Laval",
+        "country_code": "FR"
     },
     {
         "id": "city-9",
-        "name": "Seattle",
-        "country_code": "US"
+        "name": "Madrid",
+        "country_code": "ES"
     },
     {
         "id": "city-10",
-        "name": "Austin",
-        "country_code": "US"
+        "name": "London",
+        "country_code": "GB"
     },
     {
         "id": "city-11",

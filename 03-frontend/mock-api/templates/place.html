@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Place Details{% endblock %}
+
+{% block content %}
+    <section class="place-details">
+        <!-- Place Image -->
+        <img src="{{ place.image_url }}" alt="Image of {{ place.name }}" class="place-image-large">
+
+        <div class="place-info">
+            <h1>{{ place.name }}</h1>
+            <p><strong>Host:</strong> {{ place.host_name }}</p>
+            <p><strong>Price per night:</strong> ${{ place.price_per_night }}</p>
+            <p><strong>Location:</strong> {{ place.city_name }}, {{ place.country_name }}</p>
+            <p><strong>Description:</strong> {{ place.description }}</p>
+            <p><strong>Amenities:</strong> {{ place.amenities | join(', ') }}</p>
+        </div>
+    </section>
+
+    {% if user_logged_in %}
+        <!-- Form to Add a New Review -->
+        <section class="add-review">
+            <h2>Add a Review</h2>
+            <form class="form" method="post" action="{{ url_for('add_review', place_id=place.id) }}">
+                <label for="review-comment">Comment:</label>
+                <textarea id="review-comment" name="comment" required></textarea>
+
+                <label for="review-rating">Rating (1-5):</label>
+                <input type="number" id="review-rating" name="rating" min="1" max="5" required>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    {% else %}
+        <!-- Link to Add Review Page -->
+        <section class="add-review">
+            <a href="{{ url_for('add_review', place_id=place.id) }}" class="add-review-link">Add a Review</a>
+        </section>
+    {% endif %}
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <h2>Reviews</h2>
+        {% if place.reviews %}
+            {% for review in place.reviews %}
+                <div class="review-card">
+                    <h4>{{ review.user_name }}</h4>
+                    <p>Rating: {{ review.rating }}</p>
+                    <p>{{ review.comment }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No reviews yet.</p>
+        {% endif %}
+    </section>
+{% endblock %}
