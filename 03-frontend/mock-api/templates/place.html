@@ -19,9 +19,9 @@
 
     {% if user_logged_in %}
         <!-- Form to Add a New Review -->
-        <section class="add-review">
+        <section class="add-review" id="add-review-section">
             <h2>Add a Review</h2>
-            <form class="form" method="post" action="{{ url_for('add_review', place_id=place.id) }}">
+            <form class="form" id="review-form">
                 <label for="review-comment">Comment:</label>
                 <textarea id="review-comment" name="comment" required></textarea>
 
@@ -30,11 +30,12 @@
 
                 <button type="submit">Submit Review</button>
             </form>
+            <p id="error-message" class="error-message"></p>
         </section>
     {% else %}
-        <!-- Link to Add Review Page -->
+        <!-- Link to Add Review Page or Login -->
         <section class="add-review">
-            <a href="{{ url_for('add_review', place_id=place.id) }}" class="add-review-link">Add a Review</a>
+            <a href="{{ url_for('login') }}" class="login-button">Log In to Add a Review</a>
         </section>
     {% endif %}
 
@@ -53,4 +54,10 @@
             <p>No reviews yet.</p>
         {% endif %}
     </section>
+
+    <!-- Include the script to check login status -->
+    <script>
+        const addReviewUrl = "{{url_for('add_review', place_id=place.id)}}";  // Pass the URL to the script
+    </script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 {% endblock %}

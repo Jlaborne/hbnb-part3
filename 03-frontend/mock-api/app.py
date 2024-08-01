@@ -1,12 +1,13 @@
 from flask import Flask, request, jsonify, render_template
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity, decode_token
+from flask_cors import CORS
 import json
-from uuid import uuid4
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
 
 jwt = JWTManager(app)
+CORS(app) # Enable CORS for all routes
 
 with open('data/users.json') as f:
     users = json.load(f)
@@ -17,9 +18,19 @@ with open('data/places.json') as f:
 # In-memory storage for new reviews
 new_reviews = []
 
+def is_user_logged_in(request):
+    token = request.cookies.get('token')
+    if token:
+        try:
+            decode_token(token)  # Validate token
+            return True
+        except Exception as e:
+            print(f"Token validation failed: {e}")
+    return False
+
 @app.route('/')
 def index_page():
-    return render_template('index.html')
+    return render_template('index.html', user_logged_in=is_user_logged_in(request))
 
 @app.route('/login', methods=['GET'])
 def login_page():
@@ -116,7 +127,7 @@ def place_details(place_id):
     # Fetch reviews associated with the place
     place_reviews = [r for r in new_reviews if r['place_id'] == place_id]
 
-    return render_template('place.html', place=place, reviews=place_reviews)
+    return render_template('place.html', place=place, reviews=place_reviews, user_logged_in=is_user_logged_in(request))
 
 if __name__ == '__main__':
     app.run(debug=True)

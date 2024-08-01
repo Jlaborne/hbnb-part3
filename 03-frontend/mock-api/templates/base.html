@@ -23,8 +23,10 @@
                     <a href="{{ url_for('get_places') }}">Places</a>
                 </nav>
             </div>
-            <!-- Login button aligned to the right side of the header -->
-            <a href="{{ url_for('login_page') }}" class="login-button">Login</a>
+            <!-- Conditionally display the login button -->
+            {% if not user_logged_in %}
+                <a href="{{ url_for('login_page') }}" class="login-button">Login</a>
+            {% endif %}
         </header>
 
         <!-- Main content section -->
