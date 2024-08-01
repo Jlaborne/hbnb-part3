@@ -21,7 +21,7 @@
         <!-- Form to Add a New Review -->
         <section class="add-review" id="add-review-section">
             <h2>Add a Review</h2>
-            <form class="form" id="review-form">
+            <form id="review-form">
                 <label for="review-comment">Comment:</label>
                 <textarea id="review-comment" name="comment" required></textarea>
 
@@ -54,10 +54,7 @@
             <p>No reviews yet.</p>
         {% endif %}
     </section>
+    
+    <script src="/static/add_review.js"></script>
 
-    <!-- Include the script to check login status -->
-    <script>
-        const addReviewUrl = "{{url_for('add_review', place_id=place.id)}}";  // Pass the URL to the script
-    </script>
-    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 {% endblock %}

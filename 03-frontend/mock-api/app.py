@@ -106,10 +106,23 @@ def add_review(place_id):
     if not user:
         return jsonify({"msg": "User not found"}), 404
 
-    review_text = request.json.get('review')
+    review_text = request.form.get('comment')
+    rating = request.form.get('rating')
+
+    if not review_text or not rating:
+        return jsonify({"msg": "Missing comment or rating"}), 400
+    
+    try:
+        rating = int(rating)
+    except ValueError:
+        return jsonify({"msg": "Invalid rating format"}), 400
+
+    if rating < 1 or rating > 5:
+        return jsonify({"msg": "Rating must be between 1 and 5"}), 400
+
     new_review = {
         "user_name": user['name'],
-        "rating": request.json.get('rating'),
+        "rating": rating,
         "comment": review_text,
         "place_id": place_id
     }
